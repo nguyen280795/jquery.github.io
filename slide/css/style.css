@@ -1,0 +1,157 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+    color: #555;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Add your css into here*/
+.fl_left {
+    float: left;
+}
+
+.fl_right {
+    float: right;
+}
+
+.slider-contaier {
+    margin: auto;
+    text-align: center;
+    width: 960px;
+}
+
+.slider {
+    margin: auto;
+    text-align: center;
+    width: 960px;
+    position: relative;
+}
+
+.slider img {
+    margin: auto;
+    width: 900px;
+    height: 480px;
+    position: absolute;
+    right: 30px;
+}
+
+.next-slider {
+    position: absolute;
+    top: 190px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 45px;
+    right: 31px;
+}
+
+.next-slider:hover {
+    border: 2px solid;
+}
+
+.prev-slider {
+    position: absolute;
+    top: 190px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 45px;
+    left: 30px;
+}
+
+.prev-slider:hover {
+    border: 2px solid;
+}
+
+.icon-img {
+    float: left;
+    margin-left: 30px;
+    padding-top: 480px;
+}
+
+.icon-img img {
+    margin-right: 5px;
+    width: 100px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.icon-img img:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+.border-icon-img{
+    border: 2px solid red;
+}
