@@ -3,7 +3,7 @@ $(function () {
     var count = $('.mySlides').length;
 
     // Khai báo biến dùng để đồng bộ hóa giữa hình ảnh và điều khiển
-    var eindex = 0;
+    var eindex = 4;
     var index = 0;
 
     // Function xử lý hiển thị cho hình slide và các nút điều khiển tương ứng với eindex
@@ -17,13 +17,16 @@ $(function () {
     function slideswap() {
         // Nếu vị trí hiện tại đã là hình cuối cùng của slide thì sẽ chuyển eindex về -1
         // để sau eindex++ thì eindex sẽ là 0, tương ứng với hình slide đầu tiên
-        if (eindex === count - 1) {
-            eindex = -1;
-        }
         eindex++;
+        if (eindex >= count) {
+            eindex = 0;
+        }
+
         checkDiv(eindex);
         setimagefocus();
+
     }
+
     //đánh dấu ảnh đang xuất hiện
     function checkDiv(n) {
         for (i = 0; i < count; i++) {
@@ -38,7 +41,8 @@ $(function () {
     start_slideswap();
     // Thay đổi giá trị biến timeinterval bên dưới để thay đổi thời gian chuyển đổi giữa 2 hình
     function start_slideswap() {
-        timeinterval = 4000;
+        checkDiv(eindex);
+        timeinterval = 1000;
         play = setInterval(slideswap, timeinterval);
     }
 
@@ -48,25 +52,27 @@ $(function () {
     }, function () {
         start_slideswap();
     });
-
     // Xử lý khi click nút next và prev
     $('.prev-slider').click(function () {
-        eindex--;
         // Nếu vị trí hiện tại đã là hình đầu tiên của slide thì sẽ chuyển eindex về hình cuối
+        eindex--;
         if (eindex === -1) {
             eindex = count - 1;
         }
         checkDiv(eindex);
         setimagefocus();
+
     });
     $('.next-slider').click(function () {
-        eindex++;
+
         // Nếu vị trí hiện tại đã là hình đầu tiên của slide thì sẽ chuyển eindex về hình cuối
-        if (eindex === count) {
+        eindex++;
+        if (eindex >= count) {
             eindex = 0;
         }
         checkDiv(eindex);
         setimagefocus();
+
     });
 
     $('.click-img').click(function () {
